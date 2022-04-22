@@ -1,5 +1,4 @@
-/*
-todo to be considered as a connection between flight and passenger
+
 package pl.polsl.airlines.models;
 
 import lombok.Data;
@@ -14,37 +13,37 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "TICKETS")
 public class Ticket {
-  */
-/**
+
+  /**
    * ticket id
-   *//*
+   */
 
   @Id
   @Column(name = "id")
   private long id;
 
-  */
-/**
-   * flight assigned to ticket
-   *//*
 
-  @Column(name = "flight_id")
+  /**
+   * flight assigned to ticket
+   */
+
   @ManyToOne
   private Flight flight;
 
-  */
-/**
+
+  /**
    * passenger assigned to ticket
-   *//*
+   */
 
   @ManyToOne
   private Passenger passenger;
 
-  */
-/**
-   * seat number
-   *//*
 
-   private int number;
+  /**
+   * seat number
+   */
+
+  private int number;
 }
-*/
+
+

@@ -17,12 +17,12 @@ class FlightTest {
   private final Plane PLANE = mock(Plane.class);
   private final int NUMBER_OF_PLANE_SEATS = 50;
 
-  @ParameterizedTest
+ /* @ParameterizedTest
   @MethodSource("dataForTicketsTest")
   void canBuyTicketTest(int numberOfBookedTickets, boolean expectedResult){
-    flight.setPassengers(new ArrayList<>(numberOfBookedTickets));
+    flight.canBookTicket(new ArrayList<>(numberOfBookedTickets));
     assertThat(flight.canBookTicket()).isEqualTo(expectedResult);
-  }
+  }*/
 
   Stream<Arguments> dataForTicketsTest(){
     return Stream.of(

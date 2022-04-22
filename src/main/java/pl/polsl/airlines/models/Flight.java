@@ -6,7 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -48,33 +47,28 @@ public class Flight {
   /**
    * departure airport
    */
-  @Column(name = "departureAirport")
   @ManyToOne
   private Airport departureAirport;
 
   /**
    * arrival airport
    */
-  @Column(name = "arrivalAirport")
   @ManyToOne
-  @JoinColumn(name = "", referencedColumnName = "id")
   private Airport arrivalAirport;
 
   /**
    * list of tickets
    */
-  @Column(name = "passengers")
   @OneToMany
-  private List<Passenger> passengers;
+  private List<Ticket> tickets;
 
   /**
    * plane
    */
   @ManyToOne
-  @Column(name = "plane")
   private Plane plane;
 
   boolean canBookTicket(){
-    return passengers.size() < plane.getNumberOfSeats();
+    return tickets.size() < plane.getNumberOfSeats();
   }
 }

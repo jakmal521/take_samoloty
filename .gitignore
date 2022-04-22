@@ -21,3 +21,16 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+*.iml
+.gradle
+.idea
+*/.idea/*
+*/build/*
+*/out/*
+out/
+*/src/main/generated/*
+var/
+**/IamAPI.json
+**/version.json
+deployment/kubernetes/helm/iam-policy-management/reverse-proxy-config.yml
+.run
