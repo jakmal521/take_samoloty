@@ -6,14 +6,12 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Data
 @Entity
 @Table(name = "TICKETS")
 public class Ticket {
-
   /**
    * ticket id
    */
@@ -22,28 +20,21 @@ public class Ticket {
   @Column(name = "id")
   private long id;
 
-
-  /**
-   * flight assigned to ticket
-   */
-
-  @ManyToOne
-  private Flight flight;
-
-
-  /**
-   * passenger assigned to ticket
-   */
-
-  @ManyToOne
-  private Passenger passenger;
-
-
   /**
    * seat number
    */
 
   private int number;
+
+  public Ticket setId(long id) {
+    this.id = id;
+    return this;
+  }
+
+  public Ticket setNumber(int number) {
+    this.number = number;
+    return this;
+  }
 }
 
 

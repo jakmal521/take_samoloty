@@ -12,24 +12,39 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "AIRPORTS")
 public class Airport {
+  public Airport() {
+  }
 
   /**
    * id of airport
    */
   @Id
   @GeneratedValue
-  @Column(name = "id")
   private long id;
 
   /**
    * name of airport
    */
-  @Column(name = "airportName")
+  @Column(name = "airport_name", unique = true)
   private String airportName;
 
   /**
    * city where airport is placed
    */
-  @Column(name = "city")
   private String city;
+
+  public Airport setId(long id) {
+    this.id = id;
+    return this;
+  }
+
+  public Airport setAirportName(String airportName) {
+    this.airportName = airportName;
+    return this;
+  }
+
+  public Airport setCity(String city) {
+    this.city = city;
+    return this;
+  }
 }

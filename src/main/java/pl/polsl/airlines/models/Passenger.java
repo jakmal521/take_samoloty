@@ -2,10 +2,14 @@ package pl.polsl.airlines.models;
 
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.List;
 
 @Data
 @Entity
@@ -29,4 +33,22 @@ public class Passenger {
    */
   @Column(name = "surname")
   String surname;
+
+  @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+  List<Ticket> tickets;
+
+  public Passenger setId(long id) {
+    this.id = id;
+    return this;
+  }
+
+  public Passenger setName(String name) {
+    this.name = name;
+    return this;
+  }
+
+  public Passenger setSurname(String surname) {
+    this.surname = surname;
+    return this;
+  }
 }

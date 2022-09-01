@@ -2,31 +2,38 @@ package pl.polsl.airlines.models;
 
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
 @Entity
-@Table(name = "PLANES")
+@Table(name = "PLANE")
 public class Plane {
+
+  public Plane(String model, int seats) {
+    this.model = model;
+    this.seats = seats;
+  }
+  public Plane(){
+
+  }
+
   /**
    * id of plane
    */
   @Id
-  @Column(name = "id")
+  @GeneratedValue
   long id;
 
   /**
    * producer and name of plane
    */
-  @Column(name = "model")
   String model;
 
   /**
    * number of available seats in plane
    */
-  @Column(name = "seats")
-  int numberOfSeats;
+  int seats;
 }
