@@ -4,9 +4,9 @@ import org.springframework.transaction.annotation.Transactional;
 import pl.polsl.airlines.dao.FlightDao;
 import pl.polsl.airlines.dao.PassengerDao;
 import pl.polsl.airlines.dao.TicketDao;
-import pl.polsl.airlines.models.Flight;
-import pl.polsl.airlines.models.Passenger;
-import pl.polsl.airlines.models.Ticket;
+import pl.polsl.airlines.model.Flight;
+import pl.polsl.airlines.model.Passenger;
+import pl.polsl.airlines.model.Ticket;
 import pl.polsl.airlines.requests.TicketCreateOrUpdateRequest;
 
 import java.util.List;

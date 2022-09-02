@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.polsl.airlines.models.Flight;
+import pl.polsl.airlines.model.Flight;
 import pl.polsl.airlines.requests.FlightCreateOrUpdateRequest;
 import pl.polsl.airlines.services.FlightService;
 

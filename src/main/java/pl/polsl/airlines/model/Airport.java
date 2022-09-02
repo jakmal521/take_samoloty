@@ -1,4 +1,4 @@
-package pl.polsl.airlines.models;
+package pl.polsl.airlines.model;
 
 import lombok.Data;
 

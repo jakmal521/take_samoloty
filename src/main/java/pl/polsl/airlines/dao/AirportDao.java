@@ -2,12 +2,12 @@ package pl.polsl.airlines.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import pl.polsl.airlines.models.Airport;
+import pl.polsl.airlines.model.Airport;
 
 import java.util.List;
 import java.util.Optional;
 
-public class AirportDao extends ObjectDao{
+public class AirportDao extends ObjectDao {
 
   private Session session;
   private Transaction currentTransaction;

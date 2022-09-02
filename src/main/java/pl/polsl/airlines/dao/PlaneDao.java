@@ -2,9 +2,9 @@ package pl.polsl.airlines.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
 import org.springframework.stereotype.Service;
-import pl.polsl.airlines.models.Plane;
+import pl.polsl.airlines.model.Plane;
+
 import java.util.List;
 import java.util.Optional;
 

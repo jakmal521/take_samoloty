@@ -1,7 +1,8 @@
 package pl.polsl.airlines.services;
 
 import pl.polsl.airlines.dao.PlaneDao;
-import pl.polsl.airlines.models.Plane;
+import pl.polsl.airlines.model.Plane;
+import pl.polsl.airlines.requests.PlaneCreateOrUpdateRequest;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,8 +23,8 @@ public class PlaneService {
     return planeDao.get(id);
   }
 
-  public void createNewPlane(String model, int seats) {
-    planeDao.createNewPlane(new Plane(model, seats));
+  public void createNewPlane(PlaneCreateOrUpdateRequest request) {
+    planeDao.createNewPlane(new Plane(request.getModel(), request.getSeats()));
   }
 
   public void deletePlane(Long id) {
@@ -33,14 +34,14 @@ public class PlaneService {
     }
   }
 
-  public void updatePlane(Long id,String model, int seats){
+  public void updatePlane(Long id, PlaneCreateOrUpdateRequest request){
     Plane planeToUpdate = getPlaneById(id);
     if (planeToUpdate != null) {
-      planeToUpdate.setModel(model);
-      planeToUpdate.setSeats(seats);
+      planeToUpdate.setModel(request.getModel());
+      planeToUpdate.setSeats(request.getSeats());
       planeDao.update(planeToUpdate);
     } else {
-      createNewPlane(model, seats);
+      planeDao.createNewPlane(new Plane(request.getModel(), request.getSeats()));
     }
   }
 }

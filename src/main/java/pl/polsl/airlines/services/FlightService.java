@@ -4,9 +4,9 @@ import pl.polsl.airlines.dao.AirportDao;
 import pl.polsl.airlines.dao.FlightDao;
 import pl.polsl.airlines.dao.PlaneDao;
 import pl.polsl.airlines.dao.TicketDao;
-import pl.polsl.airlines.models.Airport;
-import pl.polsl.airlines.models.Flight;
-import pl.polsl.airlines.models.Plane;
+import pl.polsl.airlines.model.Airport;
+import pl.polsl.airlines.model.Flight;
+import pl.polsl.airlines.model.Plane;
 import pl.polsl.airlines.requests.FlightCreateOrUpdateRequest;
 
 import java.sql.Date;

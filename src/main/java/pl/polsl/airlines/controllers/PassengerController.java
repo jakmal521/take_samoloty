@@ -1,6 +1,5 @@
 package pl.polsl.airlines.controllers;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.polsl.airlines.models.Passenger;
+import pl.polsl.airlines.model.Passenger;
 import pl.polsl.airlines.requests.PassengerCreateOrUpdateRequest;
 import pl.polsl.airlines.services.PassengerService;
 

@@ -1,4 +1,4 @@
-package pl.polsl.airlines.models;
+package pl.polsl.airlines.model;
 
 import lombok.Data;
 
@@ -12,13 +12,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.sql.Time;
 import java.sql.Date;
+import java.sql.Time;
 import java.util.List;
 
 @Data
 @Entity
-@Table(name = "FLIGHTS", schema = "public")
+@Table(name = "FLIGHTS")
 public class Flight {
 
   /**

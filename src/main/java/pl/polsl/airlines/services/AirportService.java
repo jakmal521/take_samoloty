@@ -3,7 +3,7 @@ package pl.polsl.airlines.services;
 
 import org.springframework.stereotype.Service;
 import pl.polsl.airlines.dao.AirportDao;
-import pl.polsl.airlines.models.Airport;
+import pl.polsl.airlines.model.Airport;
 import pl.polsl.airlines.requests.AirportCreateOrUpdateRequest;
 
 import java.util.List;

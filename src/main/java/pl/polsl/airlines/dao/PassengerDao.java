@@ -2,7 +2,7 @@ package pl.polsl.airlines.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import pl.polsl.airlines.models.Passenger;
+import pl.polsl.airlines.model.Passenger;
 
 import java.util.List;
 

@@ -1,8 +1,7 @@
 package pl.polsl.airlines.services;
 
 import pl.polsl.airlines.dao.PassengerDao;
-
-import pl.polsl.airlines.models.Passenger;
+import pl.polsl.airlines.model.Passenger;
 import pl.polsl.airlines.requests.PassengerCreateOrUpdateRequest;
 
 import java.util.List;
